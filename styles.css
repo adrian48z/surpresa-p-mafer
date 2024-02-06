@@ -60,21 +60,22 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os clientes */
-    flex-wrap: wrap; /* Permitindo que os clientes quebrem a linha conforme necessário */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .client {
-    width: 150px; /* Reduzindo a largura do contêiner do cliente */
-    height: auto; /* A altura será ajustada automaticamente */
+    width: 150px;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
-    margin: 0 10px; /* Adicionando margem entre os clientes */
+    margin: 0 10px;
+    position: relative;
 }
 
 .client img {
-    width: 100%; /* A imagem ocupará toda a largura do contêiner */
-    height: auto; /* A altura será ajustada automaticamente */
+    width: 100%;
+    height: auto;
     display: block;
     border-radius: 10px;
 }
