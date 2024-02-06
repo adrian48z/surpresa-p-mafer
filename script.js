@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+    });
+
     const contactForm = document.getElementById('contact-form');
     const formError = document.getElementById('form-error');
     const formSuccess = document.getElementById('form-success');
@@ -13,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             formError.textContent = 'Por favor, preencha todos os campos.';
             formSuccess.textContent = '';
         } else {
-            // Simulando o envio do formulário (substitua esta parte com seu próprio código de envio de formulário)
             setTimeout(function() {
                 formError.textContent = '';
                 formSuccess.textContent = 'Obrigado por nos contatar!';
@@ -22,4 +26,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
