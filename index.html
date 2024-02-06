@@ -23,29 +23,36 @@
 
     <section id="servicos">
         <div class="container">
-            <h2>Serviços Oferecidos</h2>
-            <p>Nossa empresa oferece consultoria especializada em marketing de infoprodutos, que são produtos digitais vendidos online. Utilizamos a renomada Fórmula de Lançamento de Jeff Walker para criar estratégias eficazes de lançamento, garantindo o sucesso do seu produto no mercado digital.</p>
+            <h2 data-aos="fade-right">Serviços Oferecidos</h2>
+            <p data-aos="fade-right" data-aos-delay="200">Nossa empresa oferece consultoria especializada em marketing de infoprodutos, que são produtos digitais vendidos online. Utilizamos a renomada Fórmula de Lançamento de Jeff Walker para criar estratégias eficazes de lançamento, garantindo o sucesso do seu produto no mercado digital.</p>
         </div>
-    </section>    
+    </section>
 
     <section id="portfolio">
         <div class="container">
-            <h2>Portfólio de Clientes</h2>
-            <!-- Adicione informações sobre seus clientes aqui -->
+            <h2 data-aos="fade-left">Portfólio de Clientes</h2>
+            <p data-aos="fade-left" data-aos-delay="200">Apresente alguns dos seus clientes e os resultados que alcançaram com sua consultoria.</p>
         </div>
     </section>
 
     <section id="sobre">
         <div class="container">
-            <h2>Sobre Nossa Empresa</h2>
-            <!-- Inclua informações sobre sua empresa e sua abordagem de lançamento de infoprodutos -->
+            <h2 data-aos="fade-right">Sobre Nossa Empresa</h2>
+            <p data-aos="fade-right" data-aos-delay="200">Forneça informações sobre sua empresa e sua abordagem para lançamentos de infoprodutos baseados na fórmula de lançamento do Jeff Walker.</p>
         </div>
     </section>
 
     <section id="contato">
         <div class="container">
-            <h2>Contato</h2>
-            <!-- Adicione um formulário de contato aqui -->
+            <h2 data-aos="fade-left">Contato</h2>
+            <form id="contact-form" data-aos="fade-left" data-aos-delay="200">
+                <input type="text" id="name" name="name" placeholder="Nome">
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <textarea id="message" name="message" placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+                <p id="form-error" class="error-message"></p>
+                <p id="form-success" class="success-message"></p>
+            </form>
         </div>
     </section>
 
@@ -54,5 +61,8 @@
             <p>&copy; 2024 Consultoria de Marketing</p>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
