@@ -100,3 +100,26 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
+/* Estilos do Portfólio */
+.portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.portfolio-item img {
+    width: 45%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
