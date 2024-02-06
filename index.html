@@ -45,7 +45,14 @@
     <section id="contato">
         <div class="container">
             <h2>Contato</h2>
-            <p>Adicione um formulário de contato aqui para que os visitantes possam entrar em contato com você.</p>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Nome">
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <textarea id="message" name="message" placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+                <p id="form-error" class="error-message"></p>
+                <p id="form-success" class="success-message"></p>
+            </form>
         </div>
     </section>
 
@@ -54,5 +61,7 @@
             <p>&copy; 2024 Consultoria de Marketing</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
