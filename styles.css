@@ -23,11 +23,13 @@ header {
     background-color: #343a40;
     color: #fff;
     padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 36px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -45,11 +47,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease; /* Transição suave de cor */
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    color: #ffc107; /* Cor alterada ao passar o mouse */
+    color: #ffc107; 
 }
 
 .section {
@@ -67,11 +69,15 @@ section h2 {
     font-size: 32px;
     margin-bottom: 20px;
     text-align: center;
+    text-transform: uppercase;
+    color: #343a40;
+    letter-spacing: 2px;
 }
 
 section p {
     font-size: 18px;
     text-align: justify;
+    margin-bottom: 20px;
 }
 
 form {
@@ -98,12 +104,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 button:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma leve sombra ao passar o mouse */
-    background-color: #212529; /* Altera ligeiramente a cor de fundo ao passar o mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    background-color: #212529; 
 }
 
 .error-message,
@@ -117,6 +123,27 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
 }
 
 /* Estilos do Portfólio */
@@ -127,19 +154,21 @@ footer {
 }
 
 .client-image {
-    width: 22.5%; /* 45% / 2 */
+    width: 22.5%; 
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .client-image img {
     width: 100%;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out; /* Transição suave de escala */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; 
 }
 
 .client-image:hover img {
-    transform: scale(1.05); /* Aumenta ligeiramente a escala da imagem */
+    transform: scale(1.05); 
 }
 
 .client-name {
@@ -148,6 +177,7 @@ footer {
     font-weight: 700;
     text-align: center;
     margin-top: 10px;
+    color: #343a40;
 }
 
 @media (max-width: 768px) {
