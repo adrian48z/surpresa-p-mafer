@@ -8,29 +8,33 @@
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2; /* Cor de fundo suave */
-    color: #333; /* Cor do texto */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    color: #343a40; /* Cor do texto */
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    background-color: #000; /* Cor do cabeçalho */
+    background-color: #343a40; /* Cor do cabeçalho */
     color: #fff; /* Cor do texto no cabeçalho */
     padding: 20px 0;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 36px;
     text-align: center; /* Centralizar o título */
 }
 
 nav ul {
     list-style: none;
     text-align: center; /* Centralizar os links de navegação */
+    margin-top: 20px;
 }
 
 nav ul li {
@@ -41,20 +45,26 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
 }
 
 section {
     padding: 40px 0;
-    text-align: center; /* Centralizar o conteúdo das seções */
 }
 
 section h2 {
-    font-size: 22px;
+    font-size: 32px;
     margin-bottom: 20px;
+    text-align: center; /* Centralizar o título da seção */
+}
+
+section p {
+    font-size: 18px;
+    text-align: justify; /* Justificar o texto */
 }
 
 footer {
-    background-color: #000;
+    background-color: #343a40;
     color: #fff;
     padding: 20px 0;
     text-align: center;
