@@ -45,6 +45,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Cor alterada ao passar o mouse */
 }
 
 .section {
@@ -93,6 +98,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma leve sombra ao passar o mouse */
+    background-color: #212529; /* Altera ligeiramente a cor de fundo ao passar o mouse */
 }
 
 .error-message,
@@ -124,11 +135,11 @@ footer {
 .client-image img {
     width: 100%;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Transição suave de escala */
 }
 
 .client-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta ligeiramente a escala da imagem */
 }
 
 .client-name {
