@@ -1,3 +1,10 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilos globais */
 body {
     font-family: 'Roboto', sans-serif;
@@ -109,17 +116,27 @@ footer {
 }
 
 .client-image {
-    width: 22.5%; /* Ajuste para 45% / 2 */
-    transition: transform 0.3s ease-in-out;
+    width: 22.5%; /* 45% / 2 */
+    position: relative;
+    overflow: hidden;
 }
 
 .client-image img {
     width: 100%;
     border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.client-image:hover {
+.client-image:hover img {
     transform: scale(1.05);
+}
+
+.client-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
