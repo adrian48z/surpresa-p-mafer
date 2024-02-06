@@ -1,39 +1,31 @@
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Cor de fundo suave */
-    color: #343a40; /* Cor do texto */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
     line-height: 1.6;
 }
 
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 header {
-    background-color: #343a40; /* Cor do cabeçalho */
-    color: #fff; /* Cor do texto no cabeçalho */
+    background-color: #343a40;
+    color: #fff;
     padding: 20px 0;
 }
 
 header h1 {
     font-size: 36px;
-    text-align: center; /* Centralizar o título */
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    text-align: center; /* Centralizar os links de navegação */
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -49,18 +41,50 @@ nav ul li a {
 }
 
 section {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 section h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    text-align: center; /* Centralizar o título da seção */
+    text-align: center;
 }
 
 section p {
     font-size: 18px;
-    text-align: justify; /* Justificar o texto */
+    text-align: justify;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message,
+.success-message {
+    text-align: center;
+    margin-top: 10px;
 }
 
 footer {
