@@ -64,22 +64,24 @@ nav ul li a:hover {
     gap: 20px;
 }
 
-.client-image {
+.client {
     position: relative;
     overflow: hidden;
+    width: 250px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.client-image:hover {
+.client:hover {
     transform: scale(1.05);
 }
 
-.client-image img {
-    max-width: 100%;
+.client img {
+    width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
 .client-name {
@@ -87,7 +89,7 @@ nav ul li a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 10px;
     text-align: center;
