@@ -164,11 +164,12 @@ footer p {
 .client-image img {
     width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
 .client-image:hover img {
-    transform: scale(1.05); 
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
 }
 
 .client-name {
