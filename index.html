@@ -1,41 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+    <title>Consultoria de Marketing</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="container__conteudo">
-            <div class="container__informacoes">
-                <div class="container__texto">
-                    <h1></h1>
-                    <p class="texto__paragrafo"></p>
-                </div>
-                <input type="number" min="1" max="10" class="container__input">
-                <div class="chute container__botoes">
-                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
-                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
-                </div>
-            </div>
-            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
+    <header>
+        <div class="container">
+            <h1>Consultoria de Marketing</h1>
+            <nav>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
+    <section id="servicos">
+        <div class="container">
+            <h2>Serviços Oferecidos</h2>
+            <!-- Descreva seus serviços aqui -->
+        </div>
+    </section>
 
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfólio de Clientes</h2>
+            <!-- Adicione informações sobre seus clientes aqui -->
+        </div>
+    </section>
 
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Nossa Empresa</h2>
+            <!-- Inclua informações sobre sua empresa e sua abordagem de lançamento de infoprodutos -->
+        </div>
+    </section>
 
-    <script src="app.js" defer></script>
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <!-- Adicione um formulário de contato aqui -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Consultoria de Marketing</p>
+        </div>
+    </footer>
 </body>
-
 </html>
