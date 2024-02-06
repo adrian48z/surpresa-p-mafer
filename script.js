@@ -1,45 +1,60 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.section');
-    const form = document.getElementById('contact-form');
-    const formError = document.getElementById('form-error');
-    const formSuccess = document.getElementById('form-success');
+// Ativar animações AOS
+AOS.init({
+    duration: 800,
+    easing: 'slide',
+    once: true
+});
 
-    // Adicionando animações ao scroll
-    window.addEventListener('scroll', function() {
-        sections.forEach(function(section) {
-            if (isElementInViewport(section)) {
-                section.classList.add('active');
-            }
+// Ativar navegação suave ao clicar nos links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
 
-    // Validação do formulário de contato
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (name === '' || email === '' || message === '') {
-            formError.textContent = 'Por favor, preencha todos os campos.';
-            formSuccess.textContent = '';
-        } else {
-            setTimeout(function() {
-                formError.textContent = '';
-                formSuccess.textContent = 'Obrigado por nos contatar!';
-                form.reset();
-            }, 1000);
+// Ativar transição de seções ao rolar a página
+window.addEventListener('scroll', () => {
+    document.querySelectorAll('.section').forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+            section.classList.add('active');
         }
     });
+});
 
-    // Verifica se o elemento está visível na tela
-    function isElementInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+// Submissão do formulário de contato
+const contactForm = document.getElementById('contact-form');
+const formError = document.getElementById('form-error');
+const formSuccess = document.getElementById('form-success');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    try {
+        const response = await fetch(contactForm.getAttribute('action'), {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            formSuccess.textContent = 'Mensagem enviada com sucesso!';
+            formError.textContent = '';
+            contactForm.reset();
+        } else {
+            formError.textContent = 'Houve um erro ao enviar a mensagem. Por favor, tente novamente.';
+            formSuccess.textContent = '';
+        }
+    } catch (error) {
+        formError.textContent = 'Houve um erro ao enviar a mensagem. Por favor, tente novamente.';
+        formSuccess.textContent = '';
     }
 });
