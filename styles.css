@@ -109,7 +109,7 @@ footer {
 }
 
 .client-image {
-    width: 45%;
+    width: 22.5%; /* Ajuste para 45% / 2 */
     transition: transform 0.3s ease-in-out;
 }
 
